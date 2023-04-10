@@ -2,9 +2,9 @@ import React from 'react';
 
 
 class Header extends React.Component {
-
+    // {this.props.creator} <= this is a prop
     render() {
-        return <p>HEADER COMING SOON by {this.props.creator} or {this.props.coCreator}</p>;        
+        return <h1>Horned Beasts, but not where to find them.</h1>;        
     }
 
 }
