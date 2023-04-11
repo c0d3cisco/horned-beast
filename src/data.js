@@ -1,7 +1,4 @@
-import React from 'react';
-
-// {this.props.creator} <= this is a prop
-const imgArr = [{
+export const imgArr = [{
     "_id": 1,
     "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
     "title": "UniWhal",
@@ -27,32 +24,3 @@ const imgArr = [{
     "keyword": "unicorn",
     "horns": 1
 }];
-
-
-class Main extends React.Component {
-    render() {
-        const hornedBeast = imgArr.map((imgObj) => 
-        <HornedBeast imgObj = {imgObj} />
-        );
-        return (
-            <>
-                {hornedBeast}
-            </>
-        )
-    }
-}
-
-class HornedBeast extends React.Component {
-    render() {
-        return (
-            <>
-                <h2>{this.props.imgObj.title}</h2>
-                <img src={this.props.imgObj.image_url} alt={this.props.imgObj.description} title={this.props.imgObj.title} />
-                <p> {this.props.imgObj.description} </p>
-            </>
-        )
-    }
-}
-export default Main;
-
-
