@@ -1,20 +1,27 @@
-import React from 'react';
-import { imgArr } from '../data';
+import {Component} from 'react';
 import HornedBeast from './HornedBeast';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 // {this.props.creator} <= this is a prop
 
 
 
-class Main extends React.Component {
+class Main extends Component {
     render() {
-        const hornedBeast = imgArr.map((imgObj) => 
+        const hornedBeast = this.props.loadContent.map((imgObj) => 
         <HornedBeast imgObj = {imgObj} />
         );
+        console.log(hornedBeast[2]);
+        const colBeasts = hornedBeast.map(eachBeast =>
+            <Col>
+              {eachBeast}
+            </Col>
+            );
         return (
-            <>
-                {hornedBeast}
-            </>
+            <Row xs={2} sm={3} md={4} lg={5} className="g-3">
+                {colBeasts}
+            </Row>
         )
     }
 }
