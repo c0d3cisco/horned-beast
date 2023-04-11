@@ -1,9 +1,25 @@
-import React from 'react';
+import {Component} from 'react';
 
-class Footer extends React.Component{
+class Footer extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state={
+            preText: 'Author'
+        }
+    }
+
+    handleClick = () => {
+
+        const newPreText = this.state.preText === 'Content Creator' ? 'Author' : 'Content Creator';
+
+        this.setState({
+            preText: newPreText
+        })
+    }
 
     render() {
-        return <p>Author: Francisco Sanchez</p>
+        return <p onClick={this.handleClick}>{this.state.preText}: Francisco Sanchez</p>
     }
 }
 
