@@ -1,6 +1,6 @@
 import {Component} from 'react';
 
-class Footer extends Component{
+export default class Footer extends Component{
 
     constructor(props) {
         super(props);
@@ -22,5 +22,3 @@ class Footer extends Component{
         return <p onClick={this.handleClick}>{this.state.preText}: Francisco Sanchez</p>
     }
 }
-
-export default Footer;

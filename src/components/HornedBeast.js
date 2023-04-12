@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 // import { render } from 'react-dom';
@@ -11,13 +11,14 @@ const Emoji = props => (
 )
 
 
-class HornedBeast extends Component {
+
+export default class HornedBeast extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             count: 0,
-            
+
         };
     }
     // NOTE: use arrow functions for event handlers to retain proper contextual "this"
@@ -29,11 +30,19 @@ class HornedBeast extends Component {
         });
     }
 
+    keepTrackOfCount = () => {
+        // debugger
+        console.log(this.props.imgObj);
+        this.props.onSelection(this.props.imgObj);
+    }
+    
+
     render() {
         return (
 
-            <Card onClick={this.handleClick} border="primary" style={{ minWidth: '9em'}}>
-                <Card.Img variant="top" src={this.props.imgObj.image_url} alt={this.props.imgObj.description} title={this.props.imgObj.title} />
+            <Card border="primary" style={{ minWidth: '9em' }}>
+
+                <Card.Img onClick={this.keepTrackOfCount} variant="top" src={this.props.imgObj.image_url} alt={this.props.imgObj.description} title={this.props.imgObj.title} />
                 <Card.Body>
                     <Card.Title>{this.props.imgObj.title}</Card.Title>
                     <Card.Text>
@@ -41,6 +50,11 @@ class HornedBeast extends Component {
                         <br />
                         <span><Emoji symbol="🫀" /></span> {this.state.count}
                     </Card.Text>
+                        <div className="d-grid gap-2">
+                            <Button onClick={this.handleClick} variant="primary" size="lg">
+                                Like
+                            </Button>
+                        </div>
                 </Card.Body>
             </Card>
 
@@ -48,12 +62,10 @@ class HornedBeast extends Component {
     }
 }
 
-export default HornedBeast;
-
 
 // class HornedBeast extends Component {
 
-//     constructor(props) {
+//     constructor(props) { onClick={this.props.onSelection()}
 //         super(props);
 //         this.primary = {
 //             count: 0,
