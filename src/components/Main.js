@@ -5,12 +5,12 @@ import Row from 'react-bootstrap/Row';
 
 // {this.props.creator} <= this is a prop
 
-
-
-class Main extends Component {
+// this.props.onSelection()
+// this.props.onTargetHandler
+export default class Main extends Component {
     render() {
         const hornedBeast = this.props.loadContent.map((imgObj) => 
-        <HornedBeast imgObj = {imgObj} />
+        <HornedBeast onSelection={this.props.onSelection} imgObj = {imgObj} />
         );
         console.log(hornedBeast);
         const colBeasts = hornedBeast.map(eachBeast =>
@@ -25,8 +25,5 @@ class Main extends Component {
         )
     }
 }
-
-
-export default Main;
 
 
