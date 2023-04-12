@@ -2,7 +2,13 @@
 
 ## Code301 Lab
 
+### Lab02
+
 This exercise provides an introductory into the React interface by requiring a header, main, and footer file to be rendered. Additionally, the main component can be used to generate multiple components depending on the input array.
+
+### lab03
+
+This lab explored the concept of having state of parent components be affected by the actions in the child 
 
 ## Features
 
@@ -55,3 +61,15 @@ This exercise provides an introductory into the React interface by requiring a h
 **Finish time:** 6:15pm
 
 **Actual time needed to complete:** 48min
+
+### Feature 5
+
+**Name of feature:** Display a Modal
+
+**Estimate of time needed to complete:** 90min
+
+**Start time:** 4:10pm
+
+**Finish time:** 6:25pm
+
+**Actual time needed to complete:** 125min
