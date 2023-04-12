@@ -12,7 +12,7 @@ class Main extends Component {
         const hornedBeast = this.props.loadContent.map((imgObj) => 
         <HornedBeast imgObj = {imgObj} />
         );
-        console.log(hornedBeast[2]);
+        console.log(hornedBeast);
         const colBeasts = hornedBeast.map(eachBeast =>
             <Col>
               {eachBeast}
