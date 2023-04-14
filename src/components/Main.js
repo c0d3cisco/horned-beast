@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // does this need to be everywhere?
 import HornedBeast from './HornedBeast';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
