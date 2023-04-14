@@ -6,7 +6,7 @@ import Main from './components/Main';
 import Footer from './components/Footer'
 import imgArr from './data.json';
 import SelectedBeast from './components/SelectedBeast';
-import FilterBar from './components/FilterBar';
+// import FilterBar from './components/FilterBar';
 import HornedFilter from './components/HornFilter';
 
 class App extends Component {
