@@ -73,3 +73,15 @@ This lab explored the concept of having state of parent components be affected b
 **Finish time:** 6:25pm
 
 **Actual time needed to complete:** 125min
+
+### Feature 6
+
+**Name of feature:** Filter by Numbers of Horns
+
+**Estimate of time needed to complete:** 90min
+
+**Start time:** *due to travels, there was no accurate time captures*
+
+**Finish time:** *due to travels, there was no accurate time captures*
+
+**Actual time needed to complete:** ~90min
